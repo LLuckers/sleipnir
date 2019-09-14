@@ -8,7 +8,9 @@
   
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+	<maven.compiler.target>1.8</maven.compiler.target>
+	<jmetal.version>5.9</jmetal.version>
+	<jmetalsp.version>2.1-SNAPSHOT</jmetalsp.version>
   </properties>
   
   
@@ -65,30 +67,73 @@
     		<version>5.1.0</version>
     		<scope>test</scope>
     	</dependency>
-        
-        <dependency>
-            <groupId>org.uma.jmetal</groupId>
-            <artifactId>jmetal-core</artifactId>
-            <version>5.6</version>
-        </dependency>
-        
-       	<dependency>
-            <groupId>org.uma.jmetal</groupId>
-            <artifactId>jmetal-algorithm</artifactId>
-            <version>5.6</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.uma.jmetal</groupId>
-            <artifactId>jmetal-exec</artifactId>
-            <version>5.6</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.uma.jmetal</groupId>
-            <artifactId>jmetal-problem</artifactId>
-            <version>5.6</version>
-        </dependency>
+
+		<dependency>
+			<groupId>org.uma.jmetal</groupId>
+			<artifactId>jmetal-core</artifactId>
+			<version>${jmetal.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.uma.jmetal</groupId>
+			<artifactId>jmetal-problem</artifactId>
+			<version>${jmetal.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.uma.jmetal</groupId>
+			<artifactId>jmetal-algorithm</artifactId>
+			<version>${jmetal.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.uma.jmetal</groupId>
+			<artifactId>jmetal-exec</artifactId>
+			<version>${jmetal.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.uma.jmetalsp</groupId>
+			<artifactId>jmetalsp-core</artifactId>
+			<version>${jmetalsp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.uma.jmetalsp</groupId>
+			<artifactId>jmetalsp-observeddata</artifactId>
+			<version>${jmetalsp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.uma.jmetalsp</groupId>
+			<artifactId>jmetalsp-spark</artifactId>
+			<version>${jmetalsp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.uma.jmetalsp</groupId>
+			<artifactId>jmetalsp-algorithm</artifactId>
+			<version>${jmetalsp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.uma.jmetalsp</groupId>
+			<artifactId>jmetalsp-problem</artifactId>
+			<version>${jmetalsp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.uma.jmetalsp</groupId>
+			<artifactId>jmetalsp-externalsource</artifactId>
+			<version>${jmetalsp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.uma.jmetalsp</groupId>
+			<artifactId>jmetalsp-streamingdatasource</artifactId>
+			<version>${jmetalsp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.uma.jmetalsp</groupId>
+			<artifactId>jmetalsp-consumer</artifactId>
+			<version>${jmetalsp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.uma.jmetalsp</groupId>
+			<artifactId>jmetalsp-examples</artifactId>
+			<version>${jmetalsp.version}</version>
+		</dependency>
         
         <dependency>
     		<groupId>org.ojalgo</groupId>
