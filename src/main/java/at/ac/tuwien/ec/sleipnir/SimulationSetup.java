@@ -18,7 +18,7 @@ public class SimulationSetup {
 	}
 	
 	
-	
+	public static boolean cloudOnly = true;
 	public static RandomUtils rand = new RandomUtils();
 	public static int MAP_M = 6;
 	public static int MAP_N = 6;
@@ -64,7 +64,7 @@ public class SimulationSetup {
 	public static boolean batch;
 	public static double batteryCapacity = mobileEnergyBudget * mobileNum;
 	public static int iterations = 100;
-	public static int cloudNum = 6;
+	public static int cloudNum = 10;
 	public static double EchoGamma;
 	public static double EchoAlpha;
 	public static double EchoBeta;

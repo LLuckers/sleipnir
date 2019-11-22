@@ -5,6 +5,7 @@ import java.io.Serializable;
 import at.ac.tuwien.ec.model.Hardware;
 import at.ac.tuwien.ec.model.infrastructure.MobileCloudInfrastructure;
 import at.ac.tuwien.ec.model.infrastructure.computationalnodes.ComputationalNode;
+import at.ac.tuwien.ec.model.infrastructure.computationalnodes.MobileDevice;
 
 public class SoftwareComponent implements Serializable{
 	
@@ -63,8 +64,13 @@ public class SoftwareComponent implements Serializable{
 	
 
 	public double getRuntimeOnNode(ComputationalNode n, MobileCloudInfrastructure i) {
-		return i.getTransmissionTime((MobileSoftwareComponent)this, i.getNodeById("entry0"), n)*1.0 
-				+ (millionsOfInstruction/n.getMipsPerCore());
+		return (n instanceof MobileDevice)?
+				getLocalRuntimeOnNode(n,i) :
+				getLocalRuntimeOnNode(n,i)  +
+						i.getTransmissionTime((MobileSoftwareComponent)this, i.getMobileDevice(), n);//offloadAndDownloadTime(this,n,I);
+
+		/*return i.getTransmissionTime((MobileSoftwareComponent)this, i.getNodeById("entry0"), n)*1.0
+				+ (millionsOfInstruction/n.getMipsPerCore());*/
 				
 	}
 	

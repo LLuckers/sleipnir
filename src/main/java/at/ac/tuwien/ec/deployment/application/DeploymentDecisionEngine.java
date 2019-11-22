@@ -176,17 +176,23 @@ public class DeploymentDecisionEngine {
         JMetalSPApplication<
                 DeploymentSolution,
                 DynamicDeploymentProblem<DeploymentSolution>,
-                DynamicAlgorithm<List<DeploymentSolution>, AlgorithmObservedData>> application;
-
-        application = new JMetalSPApplication<>();
+                DynamicAlgorithm<List<DeploymentSolution>, AlgorithmObservedData>>
+                application = new JMetalSPApplication<>();
 
         application.setStreamingRuntime(new DefaultRuntime())
+                //set the DynamicDeploymentProblem<DeploymentSolution> problem
                 .setProblem(problem)
+                //set the InDM2<DeploymentSolution> algorithm initialized with an iMDPSO
                 .setAlgorithm(algorithm)
+                //register the dynamic problem on the "application profiler"
                 //.addStreamingDataSource(applicationStreamingDataSource,problem)
+                //register the dynamic problem on the "system monitor"
                 //.addStreamingDataSource(infrastructureStreamingDataSource,problem)
+                //register the dynamic algorithm on the keyboard to set the "user preferences" during runtime
                 .addStreamingDataSource(keyboardstreamingDataSource,algorithm)
+                //register an consumer to continuously save the results in files
                 .addAlgorithmDataConsumer(localDirectoryOutputConsumer)
+                //register the chart consumer to continuously display the resulting pareto front
                 .addAlgorithmDataConsumer(chartConsumer)
                 .run();
 }

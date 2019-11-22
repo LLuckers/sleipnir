@@ -1,4 +1,4 @@
-package at.ac.tuwien.ec.sleipnir;
+/*package at.ac.tuwien.ec.sleipnir;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -57,9 +57,6 @@ public class UCC2019Main {
 		class FrequencyComparator implements Comparator<Tuple2<ValidationOffloadScheduling, Tuple4<Integer,Double,Double,Double>>>, Serializable
 		{
 
-			/**
-			 * 
-			 */
 			private static final long serialVersionUID = -2034500309733677393L;
 
 			@Override
@@ -124,9 +121,6 @@ public class UCC2019Main {
 						Tuple4<Integer,Double,Double,Double>,
 						Tuple4<Integer,Double,Double,Double>>()
 						{
-							/**
-							 * 
-							 */
 							private static final long serialVersionUID = 1L;
 
 							@Override
@@ -268,3 +262,4 @@ public class UCC2019Main {
 		
 
 }
+*/

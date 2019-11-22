@@ -132,6 +132,22 @@ public class MobileCloudInfrastructure implements Serializable{
 		return mobileDevices;
 	}
 
+	/**
+	 * Gets the first MobileDevice of the Set, usefull for an Infrastucture with just one MobileDevice, otherwise the method getMobileDevice(String id) should be used
+	 * @return the first MobileDevice of the Set, it returns null if the Set doesn't have a item
+	 */
+	public MobileDevice getMobileDevice(){
+		return mobileDevices.values().stream().findFirst().orElse(null);
+	}
+
+	/**
+	 * Gets the MobileDevice with the given Id of the Set
+	 * @return the MobileDevice with the given Id of the Set
+	 */
+	public MobileDevice getMobileDevice(String id){
+		return mobileDevices.get(id);
+	}
+
 	public void setMobileDevices(HashMap<String, MobileDevice> mobileDevices) {
 		this.mobileDevices = mobileDevices;
 	}

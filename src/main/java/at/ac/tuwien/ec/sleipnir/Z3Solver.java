@@ -1,4 +1,4 @@
-package at.ac.tuwien.ec.sleipnir;
+/*package at.ac.tuwien.ec.sleipnir;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -185,4 +185,4 @@ public class Z3Solver {
 		}
 		return ((IntNum)value.simplify()).getInt64();
 	}
-}
+}*/

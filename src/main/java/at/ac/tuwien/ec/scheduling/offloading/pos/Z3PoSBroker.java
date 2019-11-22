@@ -1,4 +1,4 @@
-package at.ac.tuwien.ec.scheduling.offloading.pos;
+/*package at.ac.tuwien.ec.scheduling.offloading.pos;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,9 +35,7 @@ import scala.Tuple2;
 
 public class Z3PoSBroker extends PoSOffloadingAlgorithm {
 
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = -4979418341371131767L;
 	private MobileDevice currentVehicle;
 
@@ -418,3 +416,4 @@ public class Z3PoSBroker extends PoSOffloadingAlgorithm {
 	}
 
 }
+*/

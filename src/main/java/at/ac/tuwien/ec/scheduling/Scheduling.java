@@ -16,7 +16,7 @@ public class Scheduling extends LinkedHashMap<SoftwareComponent, NetworkedNode> 
 	}
 
 	public Scheduling(Scheduling deployment) {
-		// TODO Auto-generated constructor stub
+		super(deployment);
 	}
 
 	public String toString(){
